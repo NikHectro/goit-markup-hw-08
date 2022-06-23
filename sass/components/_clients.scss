@@ -1,0 +1,47 @@
+.clients {
+    &__list {
+    display: flex;
+    }
+
+    &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 170px;
+    height: 92px;
+    fill: #afb1b8;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+
+    transition: border 250ms $timing-function;
+    }
+
+    &__card {
+    box-shadow: none;
+    }
+
+    &__icon {
+    width: 106px;
+    height: 60px;
+
+    fill: #afb1b8;
+
+    transition: fill 250ms $timing-function;
+    }
+}
+
+.clients__card + .clients__card {
+    margin-left: 30px;
+}
+
+.clients__link:hover .clients__icon,
+.clients__link:focus .clients__icon {
+    fill: $accent-color;
+}
+
+.clients__link:hover,
+.clients__link:focus {
+    outline: transparent;
+    border: 1px solid $accent-color;
+}

@@ -1,0 +1,29 @@
+$primary-bgc: #ffffff;
+$primary-text-color: #757575;
+$title-text-color: #212121;
+$accent-color: #2196f3;
+$contrast-color: #fff;
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+// %list {
+//     padding: 0;
+//     margin: 0;
+//     list-style: none;
+// }
+
+%centered {
+    display: flex;
+    align-items: center;
+}
+
+%logo {
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+
+    transition: color 250ms $timing-function;
+}
+
+
+
