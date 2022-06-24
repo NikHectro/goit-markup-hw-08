@@ -383,6 +383,11 @@ img {
   display: flex;
   justify-content: center;
 }
+@media screen and (min-width: 1200px) {
+  .social-net {
+    justify-content: flex-start;
+  }
+}
 .social-net__link {
   display: inline-flex;
   align-items: center;
@@ -671,6 +676,7 @@ img {
 @media screen and (min-width: 1200px) {
   .ftr__wrapper {
     margin-bottom: 0;
+    width: 25%;
   }
 }
 .ftr__logo {
@@ -688,6 +694,13 @@ img {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ftr__container {
+    flex-wrap: nowrap;
+    text-align: start;
+    justify-content: flex-start;
   }
 }
 .ftr__contacts-link {
@@ -727,8 +740,8 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .ftr__soc-container {
-    margin-left: 70px;
     margin-bottom: 0;
+    width: 25%;
   }
 }
 
@@ -755,7 +768,6 @@ img {
 
 .ftr__subscribe {
   display: inline-block;
-  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .ftr__subscribe {
@@ -764,9 +776,21 @@ img {
 }
 @media screen and (min-width: 768px) and (min-width: 1200px) {
   .ftr__subscribe {
-    margin-left: 93px;
+    width: 50%;
+    justify-content: flex-end;
   }
 }
+@media screen and (min-width: 768px) {
+  .ftr__subscribe .ftr__subscribe-block {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .ftr__subscribe .ftr__subscribe-block {
+    display: flex;
+  }
+}
+
 .ftr__subscribe--input-field {
   padding: 15px;
   margin-bottom: 20px;
@@ -779,6 +803,9 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .ftr__subscribe--input-field {
+    display: block;
+    min-width: 358px;
+    width: 100%;
     margin-bottom: 0;
   }
 }
