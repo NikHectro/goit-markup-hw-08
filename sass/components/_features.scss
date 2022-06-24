@@ -71,10 +71,14 @@
 
   &__text {
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 30px; // need to fix for tablet & desktop //
 
     font-size: 14px;
     line-height: 1.71;
+
+    &:not(:nth-last-child(1)) {
+      margin-bottom: 30px;
+    }
 
     @media screen and (min-width: 1200px) {
       margin-bottom: 0;

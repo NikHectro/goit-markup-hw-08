@@ -281,6 +281,12 @@ button {
   font-family: inherit;
 }
 
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -302,7 +308,6 @@ button {
 
 .container {
   max-width: 480px;
-  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -327,12 +332,52 @@ button {
 }
 
 .section-title {
-  margin: 0 auto 50px;
+  margin: 0 auto 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   color: #212121;
+}
+@media screen and (min-width: 1200px) {
+  .section-title {
+    margin-bottom: 50px;
+  }
+}
+
+/* Social-net icons */
+.social-net {
+  display: flex;
+  justify-content: center;
+}
+.social-net__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-net__item:not(:last-child) {
+  margin-right: 10px;
+}
+.social-net__icon {
+  display: block;
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-net__link:hover,
+.social-net__link:focus {
+  outline: transparent;
+  background-color: #2196f3;
+}
+
+.social-net__link:hover .social-net__icon,
+.social-net__link:focus .social-net__icon {
+  fill: #ffffff;
 }
 
 .hero {
@@ -441,6 +486,9 @@ button {
   font-size: 14px;
   line-height: 1.71;
 }
+.features__text:not(:nth-last-child(1)) {
+  margin-bottom: 30px;
+}
 @media screen and (min-width: 1200px) {
   .features__text {
     margin-bottom: 0;
@@ -484,6 +532,54 @@ button {
   text-transform: uppercase;
   color: #fff;
   background: rgba(47, 48, 58, 0.8);
+}
+
+.team {
+  background-color: #f5f4fa;
+}
+.team__list {
+  display: flex;
+  flex-direction: column;
+  margin: -15px;
+}
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.employee {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  margin: 15px;
+}
+.employee__desc {
+  width: 100%;
+  padding: 30px 0 24px;
+  background-color: #ffffff;
+}
+@media screen and (min-width: 1200px) {
+  .employee__desc {
+    padding-bottom: 30px;
+  }
+}
+.employee__name {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: #212121;
+}
+.employee__profession {
+  margin-top: 0;
+  margin-bottom: 16;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
 }
 
 .button {
