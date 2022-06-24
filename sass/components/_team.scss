@@ -1,42 +1,42 @@
-.team {
-    background-color: #f5f4fa;
+// .team {
+//     background-color: #f5f4fa;
 
-    &__list {
-    display: flex;
-    }
-}
+//     &__list {
+//     display: flex;
+//     }
+// }
 
-.employee + .employee {
-    margin-left: 30px;
-}
+// .employee + .employee {
+//     margin-left: 30px;
+// }
 
-.employee {
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
+// .employee {
+//     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+//     0px 2px 1px rgba(0, 0, 0, 0.2);
+//     border-radius: 0px 0px 4px 4px;
 
-    &__desc {
-    padding: 30px;
-    background-color: $primary-bgc;
-    }
+//     &__desc {
+//     padding: 30px;
+//     background-color: $primary-bgc;
+//     }
 
-    &__name {
-    margin-top: 0;
-    margin-bottom: 10px;
+//     &__name {
+//     margin-top: 0;
+//     margin-bottom: 10px;
 
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
-    text-align: center;
-    color: $title-text-color;
-    }
+//     font-weight: 500;
+//     font-size: 16px;
+//     line-height: 1.19;
+//     text-align: center;
+//     color: $title-text-color;
+//     }
 
-    &__profession {
-    margin-top: 0;
-    margin-bottom: 16;
+//     &__profession {
+//     margin-top: 0;
+//     margin-bottom: 16;
 
-    font-size: 16px;
-    line-height: 1.19;
-    text-align: center;
-    }
-}
+//     font-size: 16px;
+//     line-height: 1.19;
+//     text-align: center;
+//     }
+// }
