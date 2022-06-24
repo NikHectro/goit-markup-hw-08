@@ -663,6 +663,11 @@ img {
 .ftr__wrapper {
   margin-bottom: 60px;
 }
+@media screen and (min-width: 768px) {
+  .ftr__wrapper {
+    width: 50%;
+  }
+}
 @media screen and (min-width: 1200px) {
   .ftr__wrapper {
     margin-bottom: 0;
@@ -677,6 +682,13 @@ img {
   justify-content: center;
   align-items: baseline;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .ftr__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 .ftr__contacts-link {
   font-style: normal;
@@ -707,6 +719,11 @@ img {
 .ftr__soc-container {
   align-items: center;
   margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .ftr__soc-container {
+    width: 50%;
+  }
 }
 @media screen and (min-width: 1200px) {
   .ftr__soc-container {
