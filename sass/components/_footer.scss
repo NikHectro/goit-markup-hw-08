@@ -1,103 +1,155 @@
-// .ftr {
-//   padding: 60px 0;
+.ftr {
+  padding: 60px 0;
 
-//   background-color: #2f303a;
+  background-color: #2f303a;
 
-//   &__container {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: baseline;
-// }
+  &__wrapper {
+    margin-bottom: 60px;
 
-//     &__contacts-container {
-//   margin-top: 20px;
-// }
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 0;
+    }
+  }
 
-//     &__contacts-link {
-//   font-style: normal;
-//   font-size: 14px;
-//   line-height: 1.71;
-//   color: rgba(255, 255, 255, 0.6);
+  &__logo {
+    display: block;
+    margin-bottom: 20px;
+  }
 
-//   transition: border 250ms $timing-function;
-// }
+  &__container {
+    // display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    text-align: center;
 
-// }
+    //     width: 100%;
 
-// .ftr__contacts-item + .ftr__contacts-item {
-//   margin-top: 9px;
-// }
+    //     @media screen and (min-width: 768px) {
+    //       flex-direction: row;
+    //     }
+  }
 
-// .ftr__contacts-link:hover,
-// .ftr__contacts-link:focus {
-//   color: $accent-color;
-// }
+  //   &__contacts-container {
+  //     margin-top: 20px;
+  //   }
 
-// .ftr__contacts-link--address {
-//     color: $contrast-color;
-// }
+  &__contacts-link {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    color: rgba(255, 255, 255, 0.6);
 
-// .ftr__soc-container {
-//   margin-left: 70px;
-// }
+    transition: border 250ms $timing-function;
+  }
+}
 
-// .ftr__title {
-//   margin: 0 0 20px;
+.ftr__contacts-item + .ftr__contacts-item {
+  margin-top: 8px;
 
-//   text-transform: uppercase;
-//   font-size: 14px;
-//   line-height: 1.14;
-//   color: $contrast-color;
-// }
+  @media screen and (min-width: 1200px) {
+    margin-top: 9px;
+  }
+}
 
-// .ftr .social-net__link {
-//   background-color: rgba(255, 255, 255, 0.1);
-// }
+.ftr__contacts-link:hover,
+.ftr__contacts-link:focus {
+  color: $accent-color;
+}
 
-// .ftr .social-net__icon {
-//   fill: $contrast-color;
-// }
+.ftr__contacts-link--address {
+  color: $contrast-color;
+}
 
-// .social-net__link:hover,
-// .social-net__link:focus {
-//   background-color: $accent-color;
-// }
+.ftr__soc-container {
+  align-items: center;
+  margin-bottom: 60px;
 
-// .ftr__subscribe {
-//   margin-left: 93px;
-// }
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+    margin-bottom: 0;
+  }
+}
 
-// .ftr__subscribe-block {
-//   display: flex;
-// }
+.ftr__title {
+  margin: 0 0 20px;
 
-// .ftr__subscribe--input-field {
-//   padding: 15px;
-//   width: 100%;
-//   min-width: 358px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.14;
+  color: $contrast-color;
+}
 
-//   border: 1px solid rgba(255, 255, 255, 0.3);
-//   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-//   border-radius: 4px;
-//   color: $contrast-color;
-//   background-color: transparent;
-// }
+.ftr .social-net__link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
-// .ftr__subscribe .button {
-//   position: relative;
+.ftr .social-net__icon {
+  fill: $contrast-color;
+}
 
-//   margin-left: 12px;
-//   min-width: 200px;
-// }
+.social-net__link:hover,
+.social-net__link:focus {
+  background-color: $accent-color;
+}
 
-// .ftr__subscribe .button:active {
-//   background: #188ce8;
-// }
+.ftr__subscribe {
+  display: inline-block;
+  @media screen and (min-width: 768px) {
+    width: 450px;
+    @media screen and (min-width: 1200px) {
+      margin-left: 93px;
+    }
+  }
 
-// .subs-icon {
-//   position: absolute;
-//   bottom: 50%;
-//   right: 28px;
-//   transform: translateY(50%);
-//   fill: $contrast-color;
-// }
+  .ftr__subscribe-block {
+  }
+
+  width: 100%;
+  //   display: flex;
+  //   flex-direction: column;
+
+  //   @media screen and (min-width: 768px) {
+  //     flex-direction: row;
+  //   }
+}
+
+.ftr__subscribe--input-field {
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  //   min-width: 358px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: $contrast-color;
+  background-color: transparent;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
+}
+
+.ftr__subscribe .button {
+  display: inline-flex;
+  position: relative;
+
+  min-width: 200px;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
+}
+
+.ftr__subscribe .button:active {
+  background: #188ce8;
+}
+
+.subs-icon {
+  position: absolute;
+  bottom: 50%;
+  right: 28px;
+  transform: translateY(50%);
+  fill: $contrast-color;
+}

@@ -79,36 +79,36 @@ img {
   //   }
 }
 
-// .logo--blue {
-//     @extend %logo;
-//     color: $accent-color;
+.logo--blue {
+  @extend %logo;
+  color: $accent-color;
 
-//     &:hover {
-//         color: #000000;
-//     }
-// }
+  &:hover {
+    color: #000000;
+  }
+}
 
-// .logo--black {
-//     @extend %logo;
-//     color: #000000;
+.logo--black {
+  @extend %logo;
+  color: #000000;
 
-//     &:hover {
-//         color: $accent-color;
-//     }
-// }
+  &:hover {
+    color: $accent-color;
+  }
+}
 
-// .logo--white {
-//     @extend %logo;
-//     color: $contrast-color;
+.logo--white {
+  @extend %logo;
+  color: $contrast-color;
 
-//     &:hover {
-//         color: $accent-color;
-//     }
-// }
+  &:hover {
+    color: $accent-color;
+  }
+}
 
-// .img-block {
-//     display: block;
-// }
+.img-block {
+  display: block;
+}
 
 /* Social-net icons */
 .social-net {

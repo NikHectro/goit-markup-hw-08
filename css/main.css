@@ -266,6 +266,14 @@ summary {
   display: list-item;
 }
 
+.logo--white, .logo--black, .logo--blue {
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 body {
   background-color: #ffffff;
   color: #757575;
@@ -343,6 +351,31 @@ img {
   .section-title {
     margin-bottom: 50px;
   }
+}
+
+.logo--blue {
+  color: #2196f3;
+}
+.logo--blue:hover {
+  color: #000000;
+}
+
+.logo--black {
+  color: #000000;
+}
+.logo--black:hover {
+  color: #2196f3;
+}
+
+.logo--white {
+  color: #fff;
+}
+.logo--white:hover {
+  color: #2196f3;
+}
+
+.img-block {
+  display: block;
 }
 
 /* Social-net icons */
@@ -622,6 +655,139 @@ img {
   height: 60px;
   fill: #afb1b8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ftr {
+  padding: 60px 0;
+  background-color: #2f303a;
+}
+.ftr__wrapper {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .ftr__wrapper {
+    margin-bottom: 0;
+  }
+}
+.ftr__logo {
+  display: block;
+  margin-bottom: 20px;
+}
+.ftr__container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  text-align: center;
+}
+.ftr__contacts-link {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.6);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ftr__contacts-item + .ftr__contacts-item {
+  margin-top: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .ftr__contacts-item + .ftr__contacts-item {
+    margin-top: 9px;
+  }
+}
+
+.ftr__contacts-link:hover,
+.ftr__contacts-link:focus {
+  color: #2196f3;
+}
+
+.ftr__contacts-link--address {
+  color: #fff;
+}
+
+.ftr__soc-container {
+  align-items: center;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .ftr__soc-container {
+    margin-left: 70px;
+    margin-bottom: 0;
+  }
+}
+
+.ftr__title {
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.14;
+  color: #fff;
+}
+
+.ftr .social-net__link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.ftr .social-net__icon {
+  fill: #fff;
+}
+
+.social-net__link:hover,
+.social-net__link:focus {
+  background-color: #2196f3;
+}
+
+.ftr__subscribe {
+  display: inline-block;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .ftr__subscribe {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .ftr__subscribe {
+    margin-left: 93px;
+  }
+}
+.ftr__subscribe--input-field {
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: #fff;
+  background-color: transparent;
+}
+@media screen and (min-width: 1200px) {
+  .ftr__subscribe--input-field {
+    margin-bottom: 0;
+  }
+}
+
+.ftr__subscribe .button {
+  display: inline-flex;
+  position: relative;
+  min-width: 200px;
+}
+@media screen and (min-width: 1200px) {
+  .ftr__subscribe .button {
+    margin-left: 12px;
+  }
+}
+
+.ftr__subscribe .button:active {
+  background: #188ce8;
+}
+
+.subs-icon {
+  position: absolute;
+  bottom: 50%;
+  right: 28px;
+  transform: translateY(50%);
+  fill: #fff;
 }
 
 .button {
