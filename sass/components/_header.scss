@@ -15,6 +15,12 @@
   padding: 0;
   border: none;
   background-color: transparent;
+
+  z-index: 2;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .menu-button .icon-close {
@@ -29,131 +35,229 @@
   display: none;
 }
 
+.menu-button:hover,
+.menu-button:focus,
+.menu-button .icon-close:hover,
+.menu-button .icon-close:focus {
+  fill: $accent-color;
+}
+
 .menu-container {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
+  background-color: $primary-bgc;
 
-  background-color: orange;
-  padding: 20px;
-  text-align: center;
-  font-size: 20px;
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
 
-  &.is-open {
-    display: block;
+    &.is-open {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
   }
 }
 
-// header {
-//     background-color: $primary-bgc;
-//     border-bottom: 1px solid #ececec;
-// }
+header {
+  background-color: $primary-bgc;
+  border-bottom: 1px solid #ececec;
+}
 
-// .main-nav {
-//     @extend %centered;
-// }
+.main-nav {
+  @extend %centered;
 
-// .nav {
-//         @extend %centered;
-//     &__logo {
-//         display: block;
-//         padding-top: 24px;
-//         padding-bottom: 25px;
-//     }
-// }
+  display: flex;
+  justify-content: space-between;
+}
 
-// .site-nav {
-//     display: flex;
-//     margin-left: 93px;
+.nav {
+  width: 100%;
+  @extend %centered;
+  &__logo {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 
-//     &__item:not(:last-child){
-//         margin-right: 50px;
-//     }
-// }
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    justify-content: space-between;
+  }
+}
 
-// .site-nav__link {
-//     position: relative;
+.site-nav {
+  @media screen and (min-width: 768px) {
+    margin-left: 88px;
+    display: flex;
 
-//     display: block;
-//     padding-top: 32px;
-//     padding-bottom: 32px;
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
 
-//     color: $title-text-color;
-//     font-weight: 500;
-//     font-size: 14px;
-//     line-height: 1.14;
-//     letter-spacing: 0.02em;
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
+}
 
-//     transition: color 250ms $timing-function;
+.site-nav__link {
+  position: relative;
+  display: block;
+  padding-bottom: 32px;
 
-//     &:hover, &:focus {
-//         color: $accent-color;
-//     }
+  color: $title-text-color;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
 
-//     &.current {
-//         color: $accent-color;
-//     }
+  transition: color 250ms $timing-function;
 
-//     &.current::after {
-//         content: '';
-//         position: absolute;
-//         bottom: -1px;
-//         left: 0;
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
 
-//         width: 100%;
-//         height: 4px;
+    font-size: 14px;
+    line-height: 1.14;
+  }
 
-//         background-color: $accent-color;
-//         border-radius: 2px;
-//     }
-// }
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 
-// .header-contacts {
-//     display: flex;
-//     margin-left: auto;
+  &.current {
+    color: $accent-color;
+  }
+  @media screen and (min-width: 768px) {
+    &.current::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
 
-//     &__item:not(:last-child) {
-//     margin-right: 50px;
-//     }
+      width: 100%;
+      height: 4px;
 
-//     &__link {
-//     display: inline-flex;
-//     align-items: center;
+      background-color: $accent-color;
+      border-radius: 2px;
+    }
+  }
+}
 
-//     font-weight: 500;
-//     font-size: 14px;
-//     line-height: 1.14;
-//     letter-spacing: 0.02em;
-//     color: $primary-text-color;
+.header-contacts {
+  display: flex;
 
-//     transition: color 250ms $timing-function;
-//     }
+  @media screen and (max-width: 767px) {
+    flex-direction: column-reverse;
+  }
 
-//     &__link:hover, &__link:focus {
-//     color: $accent-color;
-//     }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    // display: block;
+    flex-direction: column;
+    // justify-content: flex-end;
+    &__item {
+      font-size: 12px;
+      line-height: 1.17;
+      padding: 5px 0 5px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
 
-//     &__link:hover .header-contacts__icon, &__link:focus .header-contacts__icon {
-//     fill: $accent-color;
-//     }
-// }
+  &__link {
+    display: inline-flex;
+    align-items: center;
 
-// .header-contacts__icon {
-//     margin-right: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: $primary-text-color;
 
-//     fill: $primary-text-color;
+    transition: color 250ms $timing-function;
+  }
 
-//     transition: fill 250ms $timing-function;
-// }
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
 
-// .envelope{
-//     width: 16px;
-//     height: 12px;
-// }
+  &__link:hover .header-contacts__icon,
+  &__link:focus .header-contacts__icon {
+    fill: $accent-color;
+  }
+}
 
-// .smartphone{
-//     width: 10px;
-//     height: 16px;
-// }
+.header-contacts__link--email {
+  @media screen and (max-width: 767px) {
+    font-size: 24px;
+    line-height: 1.17;
+    padding-bottom: 64px;
+  }
+}
+
+.header-contacts__link--phone {
+  @media screen and (max-width: 767px) {
+    color: $accent-color;
+    font-size: 34px;
+    line-height: 1.18;
+    margin-bottom: 32px;
+  }
+}
+
+.header-contacts__icon {
+  margin-right: 10px;
+
+  fill: $primary-text-color;
+
+  transition: fill 250ms $timing-function;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.envelope {
+  width: 16px;
+  height: 12px;
+}
+
+.smartphone {
+  width: 10px;
+  height: 16px;
+}
+
+.header-contacts__soc-block {
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: flex;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+  }
+}
+.header-contacts__soc-link {
+  // &:not(:last-child) {
+  //   margin-left: 10px;
+  // }
+  margin-left: 10px;
+  padding-right: 10px;
+  color: $accent-color;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}

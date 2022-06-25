@@ -196,6 +196,7 @@
   line-height: 1.17;
   text-decoration-line: underline;
   color: $accent-color;
+  text-decoration-skip-ink: none;
 
   @media screen and (min-width: 1200px) {
     font-size: 14px;
