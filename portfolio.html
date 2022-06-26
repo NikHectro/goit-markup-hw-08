@@ -21,35 +21,72 @@
           <a href="./index.html" class="nav__logo"
             ><span class="logo--blue">Web</span><span class="logo--black">Studio</span></a
           >
-          <ul class="site-nav list">
-            <li class="site-nav__item">
-              <a href="./index.html" class="site-nav__link">Студія</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="./portfolio.html" class="site-nav__link current">Портфоліо</a>
-            </li>
-            <li class="site-nav__item"><a href="" class="site-nav__link">Контакти</a></li>
-          </ul>
-        </nav>
+          <button
+            type="button"
+            class="menu-button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg width="40px" height="40px" aria-label="Перемикач мобільного меню">
+              <use class="icon-close" href="./images/icons.svg#close_40px"></use>
+              <use class="icon-menu" href="./images/icons.svg#menu_40px"></use>
+            </svg>
+          </button>
 
-        <ul class="header-contacts list">
-          <li class="header-contacts__item">
-            <a href="mailto:info@devstudio.com" class="header-contacts__link">
-              <svg class="header-contacts__icon envelope">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="header-contacts__item">
-            <a href="tel:+380961111111" class="header-contacts__link">
-              <svg class="header-contacts__icon smartphone">
-                <use href="./images/icons.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+          <div class="menu-container" id="menu-container" data-menu>
+            <!-- <div class="navigation"></div> -->
+            <ul class="site-nav navigation list">
+              <li class="site-nav__item">
+                <a href="./index.html" class="site-nav__link">Студія</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="./portfolio.html" class="site-nav__link current">Портфоліо</a>
+              </li>
+              <li class="site-nav__item"><a href="" class="site-nav__link">Контакти</a></li>
+            </ul>
+
+            <!-- <div class="contacts"></div> -->
+            <ul class="header-contacts contacts list">
+              <ul class="header-contacts__soc-block list">
+                <li class="header-contacts__socnet">
+                  <a href="/" class="header-contacts__soc-link"> Instagram</a>
+                </li>
+                <li class="header-contacts__socnet">
+                  <a href="/" class="header-contacts__soc-link"> Twitter</a>
+                </li>
+                <li class="header-contacts__socnet">
+                  <a href="/" class="header-contacts__soc-link"> Facebook</a>
+                </li>
+                <li class="header-contacts__socnet">
+                  <a href="/" class="header-contacts__soc-link"> LinkedIn</a>
+                </li>
+              </ul>
+              <li class="header-contacts__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="header-contacts__link header-contacts__link--email"
+                >
+                  <svg class="header-contacts__icon envelope">
+                    <use href="./images/icons.svg#envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="header-contacts__item">
+                <a
+                  href="tel:+380961111111"
+                  class="header-contacts__link header-contacts__link--phone"
+                >
+                  <svg class="header-contacts__icon smartphone">
+                    <use href="./images/icons.svg#smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
 
@@ -369,5 +406,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/menu.js"></script>
   </body>
 </html>
