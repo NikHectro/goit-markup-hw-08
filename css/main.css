@@ -392,11 +392,6 @@ img {
   display: flex;
   justify-content: center;
 }
-@media screen and (min-width: 1200px) {
-  .social-net {
-    justify-content: flex-start;
-  }
-}
 .social-net__link {
   display: inline-flex;
   align-items: center;
@@ -1009,6 +1004,12 @@ header {
   font-size: 14px;
   line-height: 1.14;
   color: #fff;
+}
+
+@media screen and (min-width: 1200px) {
+  .ftr .social-net {
+    justify-content: flex-start;
+  }
 }
 
 .ftr .social-net__link {

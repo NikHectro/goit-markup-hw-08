@@ -97,6 +97,12 @@
   color: $contrast-color;
 }
 
+.ftr .social-net {
+  @media screen and (min-width: 1200px) {
+    justify-content: flex-start;
+  }
+}
+
 .ftr .social-net__link {
   background-color: rgba(255, 255, 255, 0.1);
 }
