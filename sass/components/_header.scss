@@ -252,12 +252,19 @@ header {
     line-height: 1.22;
   }
 }
-.header-contacts__soc-link {
-  // &:not(:last-child) {
-  //   margin-left: 10px;
-  // }
-  margin-left: 10px;
-  padding-right: 10px;
-  color: $accent-color;
+
+.header-contacts__socnet:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.header-contacts__soc-link {
+  color: $accent-color;
+}
+
+.header-contacts__socnet:not(:last-child) .header-contacts__soc-link {
+  padding-right: 10px;
+}
+
+.header-contacts__socnet:nth-child(n + 2) .header-contacts__soc-link {
+  padding-left: 10px;
 }
