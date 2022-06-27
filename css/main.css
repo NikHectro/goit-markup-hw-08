@@ -441,7 +441,7 @@ img {
   padding: 0;
   border: none;
   background-color: transparent;
-  z-index: 2;
+  z-index: 3;
 }
 @media screen and (min-width: 768px) {
   .menu-button {
@@ -470,6 +470,7 @@ img {
 
 .menu-container {
   background-color: #ffffff;
+  z-index: 2;
 }
 @media screen and (max-width: 767px) {
   .menu-container {
