@@ -1373,7 +1373,11 @@ header {
 
 .portfolio__filters--btn:not(:last-child) {
   margin-right: 8px;
-  margin-bottom: 15px;
+}
+@media screen and (max-width: 767px) {
+  .portfolio__filters--btn:not(:last-child) {
+    margin-bottom: 15px;
+  }
 }
 
 .button.secondary:focus,
@@ -1387,7 +1391,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 @media screen and (min-width: 768px) {
   .portfolio__filters {
@@ -1409,8 +1413,10 @@ header {
   }
 }
 
-.portfolio__card:not(:last-child) {
-  margin-bottom: 30px;
+@media screen and (max-width: 767px) {
+  .portfolio__card:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 768px) {
   .portfolio__card {

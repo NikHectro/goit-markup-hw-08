@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   justify-content: flex-start;
 
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 30px;
@@ -24,8 +24,10 @@
 }
 
 .portfolio__card {
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 
   @media screen and (min-width: 768px) {
