@@ -286,6 +286,12 @@ body {
   letter-spacing: 0.03em;
 }
 
+@media screen and (max-width: 767px) {
+  body.no-scroll {
+    overflow: hidden;
+  }
+}
+
 body.modal-open {
   overflow: hidden;
 }

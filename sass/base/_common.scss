@@ -5,6 +5,12 @@ body {
   letter-spacing: 0.03em;
 }
 
+body.no-scroll {
+  @media screen and (max-width: 767px) {
+    overflow: hidden;
+  }
+}
+
 body.modal-open {
   overflow: hidden;
 }
